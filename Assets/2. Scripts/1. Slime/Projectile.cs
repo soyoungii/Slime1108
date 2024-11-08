@@ -35,8 +35,7 @@ public class Projectile : MonoBehaviour
         // 거리에 따른 이동 시간 계산
         totalTime = distance / speed;
 
-        // 거리에 따른 포물선 높이 조절
-        // 가까울수록 낮게, 멀수록 높게 (최소 1, 최대 4)
+        // 가까울수록 낮게, 멀수록 높게(최소 1, 최대 4)
         arcHeight = Mathf.Clamp(distance * 0.2f, 0.2f, 0.5f) * baseArcHeight;
     }
 
@@ -55,7 +54,6 @@ public class Projectile : MonoBehaviour
             return;
         }
 
-        // 수정된 포물선 계산
         Vector2 currentPos = Vector2.Lerp(startPosition, targetPosition, progress);
 
         // 포물선 높이 계산

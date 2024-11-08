@@ -53,7 +53,6 @@ public class Thunder : MonoBehaviour
                 Monster target = FindNearestMonsterInRange();
                 if (target != null)
                 {
-                    // 벼락 생성 위치를 카메라 뷰 안쪽으로 조정
                     Vector3 spawnPosition = new Vector3(
                         target.transform.position.x,
                         target.transform.position.y,

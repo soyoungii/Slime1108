@@ -31,10 +31,8 @@ public class Meteor : MonoBehaviour
             Monster target = FindNearestMonster();
             if (target != null)
             {
-                // 메테오를 프리팹의 기본 위치에 생성
                 GameObject meteor = Instantiate(meteorPrefab, meteorPrefab.transform.position, Quaternion.identity);
 
-                // 메테오 움직임을 위한 코루틴 시작
                 StartCoroutine(MoveMeteor(meteor, target.transform.position));
             }
             yield return StartCoroutine(Cooldown());
